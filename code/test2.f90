@@ -9,10 +9,11 @@ program test2
 	print *, "Testing openmp..."
 	
 	!$omp parallel
-	!$omp critical
+	!!$omp critical
 	
 	!$ thread_num = omp_get_thread_num()
 	!$ print *, "This thread = ", thread_num
+
 	!$omp end critical
 	!$omp end parallel
 	
